@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chalwa Laundry - Kasir</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#2B7A78">
+</head>
+<body>
+<header class="topbar">
+  <h1>Chalwa Laundry</h1>
+  <div class="right"><button id="btn-owner">Owner</button></div>
+</header>
+
+<main class="container">
+  <section id="kasir-section">
+    <div class="card">
+      <h2>Kasir</h2>
+      <label>Member ID (opsional)</label>
+      <input id="memberId" placeholder="MEM001 (boleh kosong)">
+      <label>Nama Customer</label>
+      <input id="customerName" placeholder="Nama pelanggan">
+      <label>Layanan</label>
+      <select id="serviceSelect"></select>
+      <label>Jumlah (pcs/kg)</label>
+      <input id="qty" type="number" value="1" min="1">
+      <div class="row">
+        <button id="btn-calc">Hitung</button>
+        <button id="btn-pay">Bayar (Potong Saldo jika member)</button>
+        <button id="btn-cash">Bayar Tunai</button>
+      </div>
+      <div id="totalBox">Total: Rp <span id="total">0</span></div>
+    </div>
+    <div class="card">
+      <h3>Riwayat Transaksi (terakhir)</h3>
+      <ul id="history"></ul>
+      <div class="row small">
+        <button id="btn-export">Export CSV</button>
+        <button id="btn-backup">Backup</button>
+        <button id="btn-restore">Restore</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="owner-section" class="hidden">
+    <div class="card">
+      <h2>Owner Dashboard</h2>
+      <label>Password:</label>
+      <input id="ownerPass" type="password" placeholder="masukkan password">
+      <button id="btn-login-owner">Login</button>
+      <div id="ownerArea" class="hidden">
+        <h3>Harga Layanan</h3>
+        <div id="priceList"></div>
+        <h3>Ringkasan</h3>
+        <div id="summary"></div>
+        <div class="row small">
+          <button id="btn-reset">Reset Data</button>
+          <button id="btn-install">Install (PWA)</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <small>Chalwa Laundry • Offline PWA • Tema Hijau • Owner pw: 12345</small>
+</footer>
+
+<script src="printer.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
