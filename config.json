@@ -1,0 +1,11 @@
+{
+  "services": {
+    "Cuci Lipat": 3000,
+    "Cuci Setrika": 5000,
+    "Setrika Saja": 2000
+  },
+  "ownerPassword": "12345",
+  "theme": {
+    "primary": "#2B7A78"
+  }
+}
